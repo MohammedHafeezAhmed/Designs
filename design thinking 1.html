@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <header>
+ <!-- Hamburger Icon -->
+ <div class="hamburger" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
+</div>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="sessions.html" class="dropbtn">Sessions</a>
+            <div class="dropdown-content">
+                <a href="design thinking 1.html">Page 1</a>
+                <a href="design thinking 2 .html">Page 2</a>
+                <a href="design thinking 3 .html">Page 3</a>
+                <a href="#">Page 4</a>
+            </div>
+        </div>
+        <a href="#">Skills</a>
+        <a href="#">Education</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Team</a>
+    </nav>
+    </header>
+
+<div class="square-box">
+    <img src="graphics1.jpg" alt="Image" class="squarebox1">
+    <p class="text">This is some text beside the image. You can change this text to whatever you like!</p>
+</div> 
+
+
+    <script>
+        function toggleMenu() {
+            var navLinks = document.querySelector(".nav-links");
+            navLinks.classList.toggle("active");
+        }
+    </script>
+   <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop === 0) {
+            // At the very top of the page, show the navbar
+            header.style.top = "0";
+        } else if (scrollTop > lastScrollTop) {
+            // Scrolling down, hide the navbar
+            header.style.top = "-80px"; // Adjust this based on header height
+        } 
+        lastScrollTop = scrollTop;
+    });
+</script>
+   
+</body>
+</html>
