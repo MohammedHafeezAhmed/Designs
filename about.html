@@ -10,21 +10,63 @@
 <body>
   
     <header>
-        <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="sessions.html">Sessions</a>
+ <!-- Hamburger Icon -->
+ <div class="hamburger" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
+</div>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="sessions.html" class="dropbtn">Sessions</a>
+            <div class="dropdown-content">
+                <a href="design thinking 1.html">Page 1</a>
+                <a href="design thinking 2 .html">Page 2</a>
+                <a href="design thinking 3 .html">Page 3</a>
+                <a href="#">Page 4</a>
+            </div>
+        </div>
         <a href="#">Skills</a>
         <a href="#">Education</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact Team</a>
-        </nav>
+    </nav>
     </header>
-    <section>
-        <div>
-         <h1 class="yo">about bro</h1>
+
+    <section class="bio-section">
+        <div class="bio-img">
+            <img src="main.jpg" alt="Your Photo">
+        </div>
+        <div class="bio-content">
+            <h2>Author</h2>
+            <p>fugiat repudiandae.
+            Iure tenetur laudantium expedita sit sapiente eaque voluptatum explicabo laboriosam. Aut similique ullam aperiam pariatur veniam atque odit est quas. Perspiciatis maiores nesciunt nemo incidunt? Odit molestias illum sed mollitia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, aliquid, neque autem necessitatibus dolores!</p>
         </div>
     </section>
-   
+    <script>
+        function toggleMenu() {
+            var navLinks = document.querySelector(".nav-links");
+            navLinks.classList.toggle("active");
+        }
+    </script>
+   <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop === 0) {
+            // At the very top of the page, show the navbar
+            header.style.top = "0";
+        } else if (scrollTop > lastScrollTop) {
+            // Scrolling down, hide the navbar
+            header.style.top = "-80px"; // Adjust this based on header height
+        } 
+        lastScrollTop = scrollTop;
+    });
+</script>
    
 </body>
 </html>
