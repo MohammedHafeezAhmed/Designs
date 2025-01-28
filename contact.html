@@ -13,24 +13,24 @@
          <div class="hamburger" onclick="toggleMenu()">
             <i class="fa fa-bars"></i>
         </div>
-       <!-- Navigation Links -->
-       <nav class="nav-links">
+      <!-- Navigation Links -->
+      <nav class="nav-links">
         <a href="index.html">Home</a>
         <div class="dropdown">
-            <a href="sessions.html" class="dropbtn">Sessions</a>
+            <a class="dropbtn">Sessions</a>
             <div class="dropdown-content">
-                <a href="design thinking 1.html">Page 1</a>
-                <a href="design thinking 2 .html">Page 2</a>
-                <a href="design thinking 3 .html">Page 3</a>
-                <a href="#">Page 4</a>
+                <a href="design thinking 1.html">Class 3</a>
+                <a href="design thinking 2 .html">Class 4</a>
+                <a href="design thinking 3 .html">Class 5</a>
+                <a href="#">Class 6</a>
             </div>
         </div>
-        <a href="#">Skills</a>
-        <a href="#">Education</a>
+        <a href="presentations.html">Presentations</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact Team</a>
     </nav>
     </header>
+
 
     <section class="contact-section">
         <div class="bio-section">
@@ -64,22 +64,21 @@
             navLinks.classList.toggle("active");
         }
     </script>
-   <script>
-    let lastScrollTop = 0;
-    const header = document.querySelector("header");
-
-    window.addEventListener("scroll", function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop === 0) {
-            // At the very top of the page, show the navbar
-            header.style.top = "0";
-        } else if (scrollTop > lastScrollTop) {
-            // Scrolling down, hide the navbar
-            header.style.top = "-80px"; // Adjust this based on header height
-        } 
-        lastScrollTop = scrollTop;
+   
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdown = document.querySelector('.dropdown');
+        
+        dropdown.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
     });
 </script>
+<!-- sessions dropdown java ends -->
+<div class="footer">
+    <p>&copy; Hafeez</p>
+  </div>
+<br><br><br><br>
+
 </body>
 </html>
