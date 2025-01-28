@@ -11,7 +11,9 @@
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">Ahmed</a>
+        <a href="index.html" class="logo">Ahmed
+        <button class="day-night-toggle"></button> <!-- Day-Night toggle button -->
+        </a>
 
         <!-- Hamburger Icon -->
         <div class="hamburger" onclick="toggleMenu()">
@@ -24,14 +26,13 @@
             <div class="dropdown">
                 <a class="dropbtn">Sessions</a>
                 <div class="dropdown-content">
-                    <a href="design thinking 1.html">Page 1</a>
-                    <a href="design thinking 2 .html">Page 2</a>
-                    <a href="design thinking 3 .html">Page 3</a>
-                    <a href="#">Page 4</a>
+                    <a href="design thinking 1.html">Class 3</a>
+                    <a href="design thinking 2 .html">Class 4</a>
+                    <a href="design thinking 3 .html">Class 5</a>
+                    <a href="#">Class 6</a>
                 </div>
             </div>
-            <a href="#">Skills</a>
-            <a href="#">Education</a>
+            <a href="presentations.html">Presentations</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact Team</a>
         </nav>
@@ -44,7 +45,10 @@
         <div class="home-content">
             <h1>Hi, It's <span>Ahmed</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus labore dolores esse. Odit similique doloribus tenetur doloremque, sunt commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam quaerat neque asperiores ea.</p>
+            <p style="font-size: 3rem; font-weight: bold;">"Designing with style, coding with purpose."</p>
+<br>
+<br>
+               <p> Explore my work, or connect to share ideas. Let's create something amazing together!</p>
             
             <div class="social-icons">
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
@@ -64,23 +68,8 @@
             navLinks.classList.toggle("active");
         }
     </script>
-   <script>
-    let lastScrollTop = 0;
-    const header = document.querySelector("header");
-
-    window.addEventListener("scroll", function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop === 0) {
-            // At the very top of the page, show the navbar
-            header.style.top = "0";
-        } else if (scrollTop > lastScrollTop) {
-            // Scrolling down, hide the navbar
-            header.style.top = "-80px"; // Adjust this based on header height
-        } 
-        lastScrollTop = scrollTop;
-    });
-</script>
+   
+<!-- sessions dropdown java -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const dropdown = document.querySelector('.dropdown');
@@ -90,7 +79,11 @@
         });
     });
 </script>
-
+<!-- sessions dropdown java ends -->
+<div class="footer">
+    <p>&copy; MHA01</p>
+  </div>
+<br><br><br><br>
 
 </body> 
 </html>
